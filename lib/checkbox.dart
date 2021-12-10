@@ -51,6 +51,9 @@ class _MycheckboxState extends State<Mycheckbox> {
             setState(() {
               final newValue = !_checkboxnotification.value;
               _checkboxnotification.value = newValue;
+              CheckboxList.forEach((_checkboxnotification) {
+                _checkboxnotification.value = newValue;
+              });
             });
           });
 
